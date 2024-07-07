@@ -1,12 +1,11 @@
 const express = require('express')
-const dbConnect = require('./db')
+// const dbConnect = require('./db')
 const router = require('./routes/blogRoutes')
 const cors = require("cors")
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 5000
 const bodyParser = require("body-parser")
 const app = express()
-const port = 5000
-const db = require('./db.js')
+const db = require('./db')
 
 db()
 
