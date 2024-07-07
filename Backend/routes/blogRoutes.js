@@ -1,0 +1,13 @@
+const express = require('express');
+const { getAllBlog, createBlog, updateBlog, deleteBlog } = require('../controllers/blogControllers');
+const router = express.Router() ; //store router in a variable 
+
+
+//CRUD Operations , main URL's 
+router
+    .get("/" , getAllBlog)    
+    .post("/add" , createBlog)
+    .delete("/" , updateBlog)
+    .post("/:id" , deleteBlog )
+
+module.exports = router;
