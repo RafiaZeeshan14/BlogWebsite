@@ -9,7 +9,7 @@ const BlogHome = () => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('http://localhost:8000/blog');
+        const response = await fetch('http://localhost:5000/blog');
         const data = await response.json();
         setPosts(data);
         setLoading(false);
@@ -24,7 +24,7 @@ const BlogHome = () => {
 
   const handleEditPost = async (_id, newTitle, newDesc) => {
     try {
-      const response = await fetch(`http://localhost:8000/blog/${_id}`, {
+      const response = await fetch(`http://localhost:5000/blog/${_id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
