@@ -7,7 +7,7 @@ const router = express.Router() ; //store router in a variable
 router
     .get("/" , getAllBlog)    
     .post("/add" , createBlog)
-    .delete("/" , updateBlog)
-    .post("/:id" , deleteBlog )
+    .put("/:id", updateBlog)  
+    .delete("/:id", deleteBlog);
 
 module.exports = router;
