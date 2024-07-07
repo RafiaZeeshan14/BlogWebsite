@@ -8,6 +8,7 @@ const app = express()
 const port = 5000
 const db = require('./db.js')
 
+db()
 
 require('dotenv').config({path: '.env'})
 
@@ -19,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(cors())
 
-db()
+
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
