@@ -10,9 +10,9 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get('/', (req, res) => {
+//   res.send('Hello World!')
+// })
 app.use("/blog" , router) 
 
 app.listen(port, async () => {
