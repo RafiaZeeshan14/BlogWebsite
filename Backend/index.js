@@ -29,6 +29,5 @@ app.get('/', (req, res) => {
 app.use("/blog" , router)
  
 app.listen(PORT, async () => {
-    await dbConnect()
     console.log(`Example app listening on port ${port}`)
   })
