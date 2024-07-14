@@ -2,9 +2,14 @@
 const Blog =  require("../models/blogModels")
 
 const getAllBlog = async (req, res) => {
+   try {
     const blog = await Blog.find()
     console.log("🚀 ~ getAllBlog ~ blog:", blog)
     res.send(blog)
+   } catch (error) {
+    console.log(error)
+   }
+ 
 }
 
 const createBlog = async (req, res) => {
